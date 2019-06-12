@@ -23,6 +23,10 @@
        become: yes
        register: homevarz
 
+     - name: output homevarz.stdout_lines
+       debug:
+         var: homevarz.stdout_lines
+
      - name: Create a README.txt file if it does not exist in every home user directory
        lineinfile:
          create: yes
