@@ -1,0 +1,14 @@
+---
+- name: how to print debug
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    vendorip: '192.168.22.55'
+
+  tasks:
+    - name: Print out to the screen
+      debug: 
+        msg: 'Welcome to Ansible'
+    - name: Print a message variable 
+

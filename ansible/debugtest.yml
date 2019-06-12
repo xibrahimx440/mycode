@@ -1,0 +1,9 @@
+---
+
+- name : Using gathering facts to print out info 
+  hosts: planet-express
+
+  tasks: 
+  - name: Print a variable out ot the screen 
+    debug: 
+      msg: "Welcome to Ansible, you are using {{ vendorip }}"
