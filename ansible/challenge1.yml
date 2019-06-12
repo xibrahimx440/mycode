@@ -1,0 +1,11 @@
+---
+
+- name : Using gathering facts to print out info 
+  hosts: localhost
+  vars:
+    var1: "ansible_distribution"
+    var2: "ansible_distribution_version"
+  tasks: 
+  - name: Print a variable out ot the screen 
+    debug: 
+      msg: "the first output is {{ ansible_distribution }} the seconf output is {{ansible_distribution_version }}"
