@@ -1,0 +1,14 @@
+---
+ - hosts: localhost
+
+   tasks:
+    - name: "Learning about the debug module"
+      debug:
+        msg: "Debug module allows us to print random info to the screen like --> {{ item }}"
+      #with_items:
+      loop:
+      - "{{ ansible_distribution_file_parsed }}"
+      - "{{ ansible_distribution_file_path }}"
+      - "{{ ansible_distribution_file_variety }}"
+
+
