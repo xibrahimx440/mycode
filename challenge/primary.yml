@@ -1,0 +1,14 @@
+---
+- name: challenge to fetch Role
+  hosts: localhost
+
+  tasks:
+  - name: challenge block
+    block:
+      - name: Import the challenge role
+        import_role:
+          name: challenge_role
+    rescue:
+      - fail:
+          msg: "PRECHECK FAILED! No need to rollback. Exiting."
+ 
